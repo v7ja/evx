@@ -12,7 +12,7 @@ app=Client(
     "King",
     api_id = 15145595,
     api_hash = "c3f60ecf742e136436acc9082ac8d9a4",
-    bot_token = input('EnTeR ToKeN :'))
+    bot_token = ('2123918620:AAE75pWJEQ-ifZwWtIckpy9HLoLg3Sefh4M'))
 
 redis_url = "redis://default:a2jZotelmeOefoNWvtuaLeq0tLTdMrHf@redis-15873.c250.eu-central-1-1.ec2.cloud.redislabs.com:15873"
 r = redis.from_url(redis_url, encoding="utf-8",decode_responses=True)
@@ -24,7 +24,7 @@ click = 0
 
 @app.on_message(filters.command("start"))
 async def start(app, msg):
-    if msg.from_user.id == 6376489778:
+    if msg.from_user.id == 537680944:
         await msg.reply_text(text=f"""𝒘𝒆𝒍𝒄𝒐𝒎𝒆 @{msg.chat.username} ، 
 𝒊𝒏 𝒕𝒉𝒆 𝑩𝒐𝒕 𝑭𝒍𝒐𝒐𝒅 
 𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝒃𝒚 𝒂𝑩𝒐𝒐𝑫 🫦 : @xx_YaBh""", reply_markup=ReplyKeyboardMarkup(
@@ -41,7 +41,7 @@ async def start(app, msg):
 
 @app.on_message(filters.text)
 async def main(app, msg):
-        if msg.from_user.id == 6376489778:
+        if msg.from_user.id == 537680944:
           pass
         else:
           await app.send_message(msg.chat.id, f'''Dev''', reply_to_message_id=msg.id, reply_markup=InlineKeyboardMarkup(
